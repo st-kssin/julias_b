@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Загадка</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #001f3f;
+      color: #00ff99;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      white-space: pre-wrap;
+    }
+    #terminal {
+      max-width: 800px;
+      margin: auto;
+    }
+    .line {
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+    .visible {
+      opacity: 1;
+    }
+    #alphabet {
+      margin-top: 30px;
+      line-height: 1.5;
+    }
+    #input-section {
+      margin-top: 30px;
+    }
+    input {
+      background-color: #001f3f;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      padding: 5px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      width: 200px;
+    }
+    button {
+      background-color: #001f3f;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      padding: 5px 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    #result {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+
+  <div id="alphabet">
+    <strong>Алфавит:</strong><br>
+    A = 0<br>B = 1<br>C = 2<br>D = 3<br>E = 4<br>F = 5<br>G = 6<br>H = 7<br>I = 8<br>J = 9<br>
+    K = 10<br>L = 11<br>M = 12<br>N = 13<br>O = 14<br>P = 15<br>Q = 16<br>R = 17<br>S = 18<br>
+    T = 19<br>U = 20<br>V = 21<br>W = 22<br>X = 23<br>Y = 24<br>Z = 25
+  </div>
+
+  <div id="input-section">
+    <label for="guess">Твоя отгадка:</label>
+    <input type="text" id="guess" placeholder="Введите слово">
+    <button onclick="checkAnswer()">Проверить</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+   
